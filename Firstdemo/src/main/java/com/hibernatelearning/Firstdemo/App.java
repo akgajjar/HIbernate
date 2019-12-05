@@ -9,11 +9,8 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
 
-/**
- * Hello world!
- *
- */
 public class App {
+	
 	public static void main(String[] args) {
 
 		Configuration conf = new Configuration().configure().addAnnotatedClass(student.class);

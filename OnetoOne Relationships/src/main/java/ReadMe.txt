@@ -1,9 +1,1 @@
-
-  Sessionfactory 
-  
-  	insert
-  	select
-  	
-  	
-  	Embeddable annotation
-  	
+One to One Relationship Implementation in Hibernate
