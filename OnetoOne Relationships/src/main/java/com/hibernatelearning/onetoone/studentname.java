@@ -1,4 +1,4 @@
-package com.hibernatelearning.relationships;
+package com.hibernatelearning.onetoone;
 
 import javax.persistence.Embeddable;
 

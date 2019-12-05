@@ -1,8 +1,9 @@
-package com.hibernatelearning.relationships;
+package com.hibernatelearning.onetoone;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -12,6 +13,8 @@ public class student {
 	@Id
 	private int stuid;
 	private studentname name;
+	@OneToOne
+	private Laptop laptop;
 	
 	public int getStuid() {
 		return stuid;
@@ -25,10 +28,18 @@ public class student {
 	public void setName(studentname name) {
 		this.name = name;
 	}
+	
+	public Laptop getLaptop() {
+		return laptop;
+	}
+	public void setLaptop(Laptop laptop) {
+		this.laptop = laptop;
+	}
 	@Override
 	public String toString() {
-		return "student [stuid=" + stuid + ", name=" + name + "]";
+		return "student [stuid=" + stuid + ", name=" + name + ", laptop=" + laptop + "]";
 	}
+	
 	
 	
 }

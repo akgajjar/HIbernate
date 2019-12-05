@@ -1,4 +1,4 @@
-package com.hibernatelearning.relationships;
+package com.hibernatelearning.onetoone;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -8,16 +8,10 @@ import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
 
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
-        
         
         Configuration conf = new Configuration().configure().addAnnotatedClass(student.class).addAnnotatedClass(Laptop.class);
 
@@ -26,7 +20,7 @@ public class App
 		Session session = factory.openSession();
 
 		Laptop laptop=new Laptop();
-		laptop.setLid(101);
+		laptop.setLid(113);
 		laptop.setName("hp");
 		
 		student  stu=new student();
@@ -38,8 +32,9 @@ public class App
 		name.setMname("Vinodbhai");
 		
 		
-		stu.setStuid(105);
+		stu.setStuid(119);
 		stu.setName(name);
+		stu.setLaptop(laptop);
 		
 		
 		Transaction tx=session.beginTransaction();
