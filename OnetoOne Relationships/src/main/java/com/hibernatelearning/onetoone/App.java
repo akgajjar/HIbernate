@@ -13,14 +13,14 @@ public class App
     public static void main( String[] args )
     {
         
-        Configuration conf = new Configuration().configure().addAnnotatedClass(student.class).addAnnotatedClass(Laptop.class);
+        Configuration conf = new Configuration().configure();
 
 		ServiceRegistry reg = new ServiceRegistryBuilder().applySettings(conf.getProperties()).buildServiceRegistry();
 		SessionFactory factory = conf.buildSessionFactory(reg);
 		Session session = factory.openSession();
 
 		Laptop laptop=new Laptop();
-		laptop.setLid(113);
+		laptop.setLid(1123);
 		laptop.setName("hp");
 		
 		student  stu=new student();
@@ -32,7 +32,7 @@ public class App
 		name.setMname("Vinodbhai");
 		
 		
-		stu.setStuid(119);
+		stu.setStuid(1139);
 		stu.setName(name);
 		stu.setLaptop(laptop);
 		

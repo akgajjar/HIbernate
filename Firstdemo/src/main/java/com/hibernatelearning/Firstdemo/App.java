@@ -13,7 +13,7 @@ public class App {
 	
 	public static void main(String[] args) {
 
-		Configuration conf = new Configuration().configure().addAnnotatedClass(student.class);
+		Configuration conf = new Configuration().configure();
 
 		ServiceRegistry reg = new ServiceRegistryBuilder().applySettings(conf.getProperties()).buildServiceRegistry();
 		SessionFactory factory = conf.buildSessionFactory(reg);
@@ -27,7 +27,7 @@ public class App {
 		sname.setMname("vinodbhai");
 		sname.setLname("Gajjar");
 		
-		  student.setStuid(104); 
+		  student.setStuid(8019); 
 		  student.setName(sname);
 		  
 		  Transaction tx = session.beginTransaction(); session.save(student);
